@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Library",
+        "latitude": 40.712776,
+        "longitude": -74.005974,
+        "description": "Main campus library."
+    },
+    {
+        "id": 2,
+        "name": "Cafeteria",
+        "latitude": 40.713776,
+        "longitude": -74.006974,
+        "description": "Campus cafeteria with various dining options."
+    }
+]
