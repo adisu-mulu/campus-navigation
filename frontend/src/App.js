@@ -14,6 +14,7 @@ function App() {
     fetch('http://127.0.0.1:5000/api/locations')
       .then(response => response.json())
       .then(data => {
+        //console.log("Locations fetched:", data); // Log fetched data
         setLocations(data);
         setFilteredLocations(data);
       });
