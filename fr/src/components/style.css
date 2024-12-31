@@ -7,11 +7,20 @@
     display: flex; 
     flex-direction: column;
     flex: 1;
-    background-color: red;
+    /* background-color: red; */
     margin: 0;
     padding: 0;
 }
 #welcome-to-dilla {
-    text-align: center;
+    /* text-align: center; */
     color: white;
+}
+.homeContainers {
+display: flex;
+flex-direction: column;
+padding: 0px;
+margin: 0px;
+background-color: red;
+
+
 }

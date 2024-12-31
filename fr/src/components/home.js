@@ -8,7 +8,8 @@ const home = () => {
     return (
         <div className="home">
             <h1 id="welcome-to-dilla">Welcome to Dilla University</h1>
-            <Container className="homeContainer">
+            <div className="homeContainers">        
+            <Container >
                 <Row xs={2} md={4} lg={6}>
                     <Col>1 of 2</Col>
                     
@@ -23,7 +24,7 @@ const home = () => {
                 </Row>
               
             </Container>
-
+            </div>
 
         </div>
     );

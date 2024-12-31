@@ -9,12 +9,14 @@ function App() {
   return (
     <div className="App">
       <NavbarMenu />
-      <Router>
-      <Routes>
-      <Route path="/" Component={home} />
-       <Route path="/navigation" Component={Navigation} />
-      </Routes>
-      </Router>
+      <div className="appChildren">
+        <Router>
+          <Routes>
+            <Route path="/" Component={home} />
+            <Route path="/navigation" Component={Navigation} />
+          </Routes>
+        </Router>
+      </div>
     </div>
   );
 }
