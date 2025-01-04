@@ -2,12 +2,11 @@ import React from 'react';
 
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import '../components/style.css';
-const home = () => {
 
+
+const home = () => {
     return (
         <div className="home">
-
-
             {/* About Section */}
             <div className="homeContainers">
                 <Container className="about-section py-4">
@@ -21,28 +20,32 @@ const home = () => {
                     </Row>
                 </Container>
 
-               
-
                 {/* Featured Section */}
                 <Container className="featured-section py-4">
                     <h2 className="text-center">Featured Locations</h2>
                     <Row>
-                        <Col md={4} className="text-center">
-                            <h3>Library</h3>
-                            <p>A state-of-the-art facility for your learning and research needs.</p>
+                        <Col md={4} className="featured-col">
+                            <a href="/library" className="featured-link">
+                                <h3>Library</h3>
+                                <p>A state-of-the-art facility for your learning and research needs.</p>
+                            </a>
                         </Col>
-                        <Col md={4} className="text-center">
-                            <h3>Administration Building</h3>
-                            <p>Find all administrative offices and student services here.</p>
+                        <Col md={4} className="featured-col">
+                            <a href="/admin-building" className="featured-link">
+                                <h3>Administration Building</h3>
+                                <p>Find all administrative offices and student services here.</p>
+                            </a>
                         </Col>
-                        <Col md={4} className="text-center">
-                            <h3>Sports Complex</h3>
-                            <p>Enjoy world-class sports facilities and recreational activities.</p>
+                        <Col md={4} className="featured-col">
+                            <a href="/sports-complex" className="featured-link">
+                                <h3>Sports Complex</h3>
+                                <p>Enjoy world-class sports facilities and recreational activities.</p>
+                            </a>
                         </Col>
                     </Row>
                 </Container>
-                 {/* Quick Links Section */}
-                 <Container className="quick-links py-4">
+                {/* Quick Links Section */}
+                <Container className="quick-links py-4">
                     <Row>
                         <Col md={4}>
                             <Button variant="primary" size="lg" className="w-100">
@@ -69,6 +72,7 @@ const home = () => {
                             <p>
                                 Freshmen students will be joining on...
                             </p>
+                            <a href=""><i>See more</i></a>
                         </Col>
                     </Row>
                 </Container>
@@ -79,6 +83,7 @@ const home = () => {
                             <p>
                                 Dilla university has moved its main campus to samara
                             </p>
+                            <a href=""><i>See more</i></a>
                         </Col>
                     </Row>
                 </Container>

@@ -43,7 +43,7 @@ export default Navigation;
 
 //       // Add the Google Maps Satellite Tile Layer
 //       const googleLayer = L.gridLayer.googleMutant({
-//         type: "satellite", // 'roadmap', 'satellite', 'terrain', or 'hybrid'
+//         type: "terrain", // 'roadmap', 'satellite', 'terrain', or 'hybrid'
 //       });
 
 //       map.addLayer(googleLayer);
@@ -53,7 +53,7 @@ export default Navigation;
 //   return (
 //     <MapContainer
 //       ref={mapRef}
-//       center={[51.505, -0.09]} // Set your desired initial coordinates
+//       center={[6.431332, 38.288733]} // Set your desired initial coordinates
 //       zoom={13}
 //       // style={{ height: "100vh", width: "100%" }}
 //     />

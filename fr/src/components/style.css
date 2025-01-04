@@ -31,8 +31,8 @@ margin: 0px;
 
 /* home */
 .home {
-    padding: 20px;
-    background-color: #f9f9f9;
+    padding: 50px;
+    /* background-color: #f9f9f9; */
     min-height: 100vh;
   }
   
@@ -44,9 +44,9 @@ margin: 0px;
   .quick-links,
   .featured-section {
     background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(168, 167, 167, 0.1);
+    margin-bottom: 100px;
     padding: 20px;
   }
   
@@ -55,10 +55,6 @@ margin: 0px;
     color: #fff;
   }
   
-  /* office-directories */
-  .office-directories-page {
-    background-color: #f9f9f9;
-  }
   
   .office-card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -76,4 +72,32 @@ margin: 0px;
     border-radius: 8px;
     overflow: hidden;
   }
+  
+
+
+  /* hover */
+  .featured-col {
+    text-align: center;
+    padding: 20px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin: 10px 0;
+  }
+  
+  .featured-link {
+    text-decoration: none;
+    color: inherit; /* Inherits the color from the parent */
+  }
+  
+  .featured-col:hover {
+    transform: scale(1.05); /* Slightly enlarges the column */
+    /* background-color: #f8f9fa;  */
+    cursor: pointer;
+  }
+  
+  .featured-col:hover .featured-link h3 {
+    color: #007bff; /* Changes the heading color on hover */
+  }
+  
   
