@@ -1,0 +1,79 @@
+.leaflet-container{
+    height: 100vh;
+    width: 100%;
+    
+}
+
+.home{
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    flex: 1;
+    /* background-color: red; */
+    margin: 0;
+    padding: 0;
+}
+#welcome-to-dilla {
+    /* text-align: center; */
+    color: white;
+}
+.homeContainers {
+display: flex;
+flex-direction: column;
+padding: 0px;
+margin: 0px;
+
+
+
+}
+
+
+
+/* home */
+.home {
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .about-section,
+  .quick-links,
+  .featured-section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+  
+  .footer {
+    background-color: #222;
+    color: #fff;
+  }
+  
+  /* office-directories */
+  .office-directories-page {
+    background-color: #f9f9f9;
+  }
+  
+  .office-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .office-card .card-footer {
+    background-color: #ffffff;
+    border-top: none;
+  }
+  
+  .table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
