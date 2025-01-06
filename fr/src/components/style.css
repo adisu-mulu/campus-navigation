@@ -9,9 +9,13 @@
     display: flex; 
     flex-direction: column;
     flex: 1;
-    /* background-color: red; */
+    /* background-color:darkslategray; */
+    background-image: url("./../../public/gedeo2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    
 }
 #welcome-to-dilla {
     /* text-align: center; */
@@ -43,9 +47,10 @@ margin: 0px;
   .about-section,
   .quick-links,
   .featured-section {
-    background-color: #ffffff;
+    background-color: rgba(32, 32, 51, 0.692);
+    color: white;
     border-radius: 2px;
-    box-shadow: 0 2px 4px rgba(168, 167, 167, 0.1);
+    box-shadow: 0 2px 4px rgba(247, 244, 244, 0.1);
     margin-bottom: 100px;
     padding: 20px;
   }
@@ -73,7 +78,15 @@ margin: 0px;
     overflow: hidden;
   }
   
-
+/* map */
+.map {
+  width: 80%;
+  padding: 40px 0 40px 0px;
+  margin: 0 auto;
+}
+#mapcontainer {
+  width: 100;
+}
 
   /* hover */
   .featured-col {
@@ -100,4 +113,15 @@ margin: 0px;
     color: #007bff; /* Changes the heading color on hover */
   }
   
-  
+  /* libraries galler */
+ #galleryDiv {
+  width: 100%;
+ }
+ #carouselId {
+  width: 75%;
+  margin: 0 auto; 
+ }
+ #carouselItem img {
+  width: 100%;
+ 
+ }

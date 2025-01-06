@@ -1,10 +1,48 @@
-import React from 'react';
 
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button } from 'react-bootstrap';
+// import Libraries from './components/libraries';
 import '../components/style.css';
+import { Link } from 'react-router-dom';
+
+const Home = () => {
+    const [news, setNews] = useState([]);
+    const [announcements, setAnnouncements] = useState([]);
+
+    useEffect(() => {
+        // Fetch directory data from the backend
+        fetch("http://127.0.0.1:5000/api/news")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch directory data");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setNews(data); // Store fetched data in state
+            })
+            .catch((error) => {
+                console.error("Error fetching directory data:", error);
+            });
+    }, []);
 
 
-const home = () => {
+    useEffect(() => {
+        // Fetch directory data from the backend
+        fetch("http://127.0.0.1:5000/api/announcements")
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch directory data");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setAnnouncements(data); // Store fetched data in state
+            })
+            .catch((error) => {
+                console.error("Error fetching directory data:", error);
+            });
+    }, []);
     return (
         <div className="home">
             {/* About Section */}
@@ -25,13 +63,13 @@ const home = () => {
                     <h2 className="text-center">Featured Locations</h2>
                     <Row>
                         <Col md={4} className="featured-col">
-                            <a href="/library" className="featured-link">
+                            <Link to="/libraries" className="featured-link">
                                 <h3>Library</h3>
                                 <p>A state-of-the-art facility for your learning and research needs.</p>
-                            </a>
+                            </Link>
                         </Col>
                         <Col md={4} className="featured-col">
-                            <a href="/admin-building" className="featured-link">
+                            <a href="/admin-offices" className="featured-link">
                                 <h3>Administration Building</h3>
                                 <p>Find all administrative offices and student services here.</p>
                             </a>
@@ -69,9 +107,11 @@ const home = () => {
                     <Row className="mb-3">
                         <Col>
                             <h2>Latest News</h2>
-                            <p>
-                                Freshmen students will be joining on...
-                            </p>
+                            {news.map((news, index) => (
+                                <p key={index}>
+                                    {news.news}
+                                </p>
+                            ))}
                             <a href=""><i>See more</i></a>
                         </Col>
                     </Row>
@@ -80,9 +120,11 @@ const home = () => {
                     <Row className="mb-3">
                         <Col>
                             <h2>Announcements</h2>
-                            <p>
-                                Dilla university has moved its main campus to samara
-                            </p>
+                            {announcements.map((announcements, index) => (
+                                <p key={index}>
+                                    {announcements.announcements}
+                                </p>
+                            ))}
                             <a href=""><i>See more</i></a>
                         </Col>
                     </Row>
@@ -92,7 +134,9 @@ const home = () => {
                         <Col>
                             <h2>2017 Academic calendar</h2>
                             <p>
-                                Academic calendar
+                                <a href="/Academic-Calendar-2017.pdf" target="_blank" rel="noopener noreferrer">
+                                    Academic calendar 2017
+                                </a>
                             </p>
                         </Col>
                     </Row>
@@ -103,4 +147,4 @@ const home = () => {
 
 }
 
-export default home;
+export default Home;

@@ -1,31 +1,46 @@
-import React from 'react';
+//import React from 'react';
+import React, { useState, useEffect } from "react";
 import { Container, Tab, Tabs, Row, Col, Card, Table } from 'react-bootstrap';
 import '../components/style.css';
 
 function OfficeDirectories() {
-  const offices = [
-    {
-      name: 'Admissions Office',
-      description: 'Handles student applications, enrollment, and related queries.',
-      contact: 'Email: admissions@dillauni.edu | Phone: +251-123-456-789',
-    },
-    {
-      name: 'Finance Office',
-      description: 'Manages tuition payments, scholarships, and financial aid.',
-      contact: 'Email: finance@dillauni.edu | Phone: +251-987-654-321',
-    },
-    {
-      name: 'Student Affairs',
-      description: 'Supports student well-being, housing, and extracurricular activities.',
-      contact: 'Email: student.affairs@dillauni.edu | Phone: +251-345-678-910',
-    },
-  ];
+ 
+  const [directoryData, setDirectory] = useState([]);
+  const [offices, setOffice] = useState([]);
 
-  const directoryData = [
-    { name: 'Dr. John Doe', position: 'Dean of Science', email: 'john.doe@dillauni.edu', phone: '+251-123-456-789' },
-    { name: 'Prof. Jane Smith', position: 'Head of Arts Department', email: 'jane.smith@dillauni.edu', phone: '+251-987-654-321' },
-    { name: 'Mr. Samuel Green', position: 'Registrar', email: 'samuel.green@dillauni.edu', phone: '+251-345-678-910' },
-  ];
+  useEffect(() => {
+    // Fetch directory data from the backend
+    fetch("http://127.0.0.1:5000/api/directory")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch directory data");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setDirectory(data); // Store fetched data in state
+      })
+      .catch((error) => {
+        console.error("Error fetching directory data:", error);
+      });
+  }, []);
+
+  useEffect(() => {
+    // Fetch directory data from the backend
+    fetch("http://127.0.0.1:5000/api/offices")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch directory data");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setOffice(data); // Store fetched data in state
+      })
+      .catch((error) => {
+        console.error("Error fetching directory data:", error);
+      });
+  }, []);
 
   return (
     <Container className="office-directories-page py-5">

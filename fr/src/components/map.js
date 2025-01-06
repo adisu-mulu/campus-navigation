@@ -6,22 +6,23 @@ import '../components/style.css';
 const Navigation = () => {
 
   return (
-    <MapContainer center={[6.431332, 38.288733]} zoom={13}>
-      
-    <TileLayer
-      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        //       url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-        // attribution='&copy; <a href="https://www.esri.com/">Esri</a> contributors'
-    />
-    <Marker position={[6.431332, 38.288733]}>
-      <Popup>
-        A pretty CSS3 popup. <br /> Easily customizable.
-      </Popup>
-    </Marker>
-  </MapContainer>
-
+    <div className="map">
+    <MapContainer center={[6.426728, 38.288110]} zoom={15} id="mapcontainer">
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      //       url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+      // attribution='&copy; <a href="https://www.esri.com/">Esri</a> contributors'
+      />
+      <Marker position={[6.426728, 38.288110]}>
+        <Popup>
+          A pretty CSS3 popup. <br /> Easily customizable.
+        </Popup>
+      </Marker>
+    </MapContainer>
+    </div>
   );
+  
 };
 export default Navigation;
 
